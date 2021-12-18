@@ -2,12 +2,25 @@
 <nav class="nav">
   <div class="left-block">
     <div class="circle-collection">
-      <img src="../../../assets/header-img/collection-circle.svg" alt="circle">
-      <a href="">Коллекция</a>
+      <a
+        class="link"
+        routerLinkActive="link__active"
+        routerLink="/collection"
+      >
+        <img src="../../../assets/header-img/circle.svg" alt="circle">
+        Коллекция</a>
     </div>
     <div class="plus-add">
-      <img src="../../../assets/header-img/add-plus.svg" alt="plus">
-      <a href="">Добавить</a>
+      <a
+        class="link"
+        routerLinkActive="link__active"
+        routerLink="/"
+        [routerLinkActiveOptions]="{
+				exact: true
+			}"
+      >
+        <img src="../../../assets/header-img/add-plus.svg" alt="plus">
+        Добавить</a>
     </div>
   </div>
 
@@ -18,9 +31,13 @@
   <div class="right-block">
     <div class="loupe-search">
       <img src="../../../assets/header-img/loupe.svg" alt="loupe">
-      <a href="">Поиск</a>
+      <a
+        class="link"
+        routerLink="/search"
+      >Поиск</a>
     </div>
     <img src="../../../assets/header-img/avatar.svg" class="avatar" alt="avatar">
   </div>
 </nav>
 </header>
+

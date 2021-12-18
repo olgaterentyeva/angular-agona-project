@@ -1,9 +1,19 @@
 <main class="main-container">
   <h1>О фильме</h1>
-  <h3>Toggle Switch</h3>
+  <h3>
+    <form [formGroup]="form">
+      <app-toggle-switch formControlName="toggle"></app-toggle-switch>
+    </form>
+  </h3>
 
   <div class="film-search">
     <h2>Название</h2>
-    <input type="text" class="film-search-input" placeholder="Например, Титаник">
+    <form [formGroup]="form">
+      <input
+        placeholder="Например, Титаник"
+        formControlName="filmSearch"
+        class="film-search-input"
+      />
+    </form>
   </div>
 </main>

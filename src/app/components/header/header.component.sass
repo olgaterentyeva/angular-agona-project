@@ -1,6 +1,7 @@
 \:host
   //почему-то пока что не работает
   background: rgba(249, 249, 249, 0.94)
+  display: block
 
 .header
   width: 100%
@@ -10,14 +11,23 @@
   padding: 16px 0
 
 
-  a
-    font-family: SF Pro Text, serif
-    font-style: normal
-    font-weight: 500
-    font-size: 18px
-    line-height: 21px
-    text-decoration: none
-    color: black
+.link
+  font-family: SF Pro Text, serif
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+  text-decoration: none
+  color: black
+
+  &__active
+    background: #002DFF
+    border-radius: 21.5px
+    height: 38px
+    width: 132px
+    margin-left: 35px
+    padding-left: 14px
+    color: white
 
 .nav
   display: flex
@@ -36,19 +46,24 @@
   flex-direction: row
   align-items: center
 
+  img
+    margin: 0 auto
+    background: #002DFF
+    border-radius: 50%
+
 .plus-add
   display: flex
   flex-direction: row
   align-items: center
-  background: #002DFF
-  border-radius: 21.5px
-  height: 38px
-  width: 132px
-  margin-left: 35px
-  padding-left: 14px
+  //background: #002DFF
+  //border-radius: 21.5px
+  //height: 38px
+  //width: 132px
+  //margin-left: 35px
+  //padding-left: 14px
 
-  a
-    color: white
+.mini-logo
+  margin-top: 10px
 
 .right-block
   display: flex

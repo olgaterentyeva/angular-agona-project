@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-film-info',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmInfoComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      filmSearch: [null, [Validators.required]]
+    });
+    this.form = this.fb.group({
+      toggleSwitch: [true]
+    });
+  }
 
   ngOnInit(): void {
   }

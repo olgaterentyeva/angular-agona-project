@@ -1,19 +1,51 @@
 <main class="main-container">
   <h1>О фильме</h1>
-  <h3>
-    <form [formGroup]="form">
-      <app-toggle-switch formControlName="toggle"></app-toggle-switch>
-    </form>
-  </h3>
+<!--  <app-toggle></app-toggle>-->
+<!--  <div class="film-search">-->
+<!--    <h2>Название</h2>-->
+<!--    <form [formGroup]="form">-->
+<!--      <input-->
+<!--        placeholder="Например, Титаник"-->
+<!--        formControlName="filmSearch"-->
+<!--        class="film-search-input"-->
+<!--      />-->
+<!--    </form>-->
+<!--  </div>-->
 
-  <div class="film-search">
-    <h2>Название</h2>
-    <form [formGroup]="form">
-      <input
-        placeholder="Например, Титаник"
-        formControlName="filmSearch"
-        class="film-search-input"
-      />
-    </form>
-  </div>
+  <form [formGroup]="form">
+    <app-toggle formControlName="toggle"></app-toggle>
+
+    <div class="filmList">
+      <label> Название
+        <input
+          class="search"
+          type="search"
+          formControlName="searchInput"
+          placeholder="Например, Титаник"
+        >
+      </label>
+
+      <div class="films__container">
+        <ng-container *ngIf = "form.get('searchInput')!.value.length !== 0; else initState">
+          <ng-container *ngIf="(films$ | async)!.length > 0; else notFound">
+            <app-film (clickedOnPoster) = "onClick($event)"></app-film>
+          </ng-container>
+        </ng-container>
+
+        <ng-template #initState>
+          <div></div>
+        </ng-template>
+
+        <ng-template #notFound>
+          <div class="notFound">
+            <div class="notFound__img"></div>
+            <div class="notFound__info">
+              <p>Фильм не найден</p>
+              <a routerLink="/">Добавьте его вручную</a>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </form>
 </main>

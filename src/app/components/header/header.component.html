@@ -1,43 +1,30 @@
-<header class="header">
-<nav class="nav">
-  <div class="left-block">
-    <div class="circle-collection">
-      <a
-        class="link"
-        routerLinkActive="link__active"
-        routerLink="/collection"
-      >
-        <img src="../../../assets/header-img/circle.svg" alt="circle">
-        Коллекция</a>
+<header class="header__wrapper">
+  <div class="header">
+    <nav>
+      <a routerLink="/" class="link">
+        <img src="/assets/header-img/collection-circle.svg" alt="circle">
+        Коллекция
+      </a>
+
+      <a routerLink="/" class="link">
+        <img src="/assets/header-img/plus.svg" alt="plus">
+        Добавить
+      </a>
+
+    </nav>
+
+    <a routerLink="/" class="logo">
+      <img src="/assets/header-img/mini-logo.svg" alt="mini-logo">
+    </a>
+
+    <div class="actions">
+      <app-button>
+        <img src="/assets/header-img/white-loupe.svg" alt="loupe">
+        Поиск
+      </app-button>
+      <img class="avatar" src="/assets/header-img/avatar.svg" alt="avatar">
     </div>
-    <div class="plus-add">
-      <a
-        class="link"
-        routerLinkActive="link__active"
-        routerLink="/"
-        [routerLinkActiveOptions]="{
-				exact: true
-			}"
-      >
-        <img src="../../../assets/header-img/add-plus.svg" alt="plus">
-        Добавить</a>
-    </div>
+
   </div>
 
-  <div class="mini-logo">
-    <img src="../../../assets/header-img/mini-logo.svg" alt="mini-logo">
-  </div>
-
-  <div class="right-block">
-    <div class="loupe-search">
-      <img src="../../../assets/header-img/loupe.svg" alt="loupe">
-      <a
-        class="link"
-        routerLink="/search"
-      >Поиск</a>
-    </div>
-    <img src="../../../assets/header-img/avatar.svg" class="avatar" alt="avatar">
-  </div>
-</nav>
 </header>
-

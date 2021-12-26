@@ -12,6 +12,7 @@ import { FilmComponent } from './components/film/film.component';
 import {ToggleComponent} from "./components/toggle/toggle.component";
 import { GenresSearchComponent } from './components/genres-search/genres-search.component';
 import { DescriptionFilmComponent } from './pages/description-film/description-film.component';
+import { SaveButtonComponent } from './components/save-button/save-button.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { DescriptionFilmComponent } from './pages/description-film/description-f
     ToggleComponent,
     GenresSearchComponent,
     DescriptionFilmComponent,
+    SaveButtonComponent,
   ],
   imports: [
     BrowserModule,

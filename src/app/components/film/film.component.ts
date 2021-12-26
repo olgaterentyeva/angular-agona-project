@@ -18,4 +18,5 @@ export class FilmComponent {
     this.clickedOnPoster.emit(true);
   }
 
+
 }

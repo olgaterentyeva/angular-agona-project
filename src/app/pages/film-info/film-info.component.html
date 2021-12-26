@@ -38,7 +38,7 @@
 <ng-template #other>
   <div class="manualSearch">
     <label>Название</label>
-    <input class="search" type="search" placeholder="Например, Титаник">
+    <input class="search" type="search" formControlName="dataInput" placeholder="Например, Титаник">
     <label>Год</label>
     <input class="search" type="search" placeholder="Укажите год выхода фильма">
     <label>Описание</label>
@@ -49,11 +49,6 @@
       <label>Постер</label>
       <img src="assets/poster.svg" alt="poster">
     </div>
-
-<!--    сделать кнопку отдельной компонентой-->
-    <button class="saveButton">
-      <img src="/assets/header-img/plus.svg" alt="plus">
-      Сохранить
-    </button>
+    <app-save-button></app-save-button>
   </div>
 </ng-template>

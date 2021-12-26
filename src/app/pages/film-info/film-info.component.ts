@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Component} from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
 import { delay, distinctUntilChanged } from 'rxjs';
 import { FilmService } from 'src/app/services/film.service';
 
@@ -13,6 +13,8 @@ export class FilmInfoComponent {
   form: FormGroup;
   films$ = this.filmService.films$;
   value = '';
+  selected = 0;
+  filmNotFound = true;
 
   constructor(private fb: FormBuilder,
               private filmService: FilmService) {
@@ -21,24 +23,25 @@ export class FilmInfoComponent {
       toggle:["true"]
     });
 
-    // @ts-ignore
-    this.form.get('searchInput').valueChanges
+
+    this.form.get('searchInput')!.valueChanges
       .pipe(
         delay(700),
         distinctUntilChanged(),
       )
       .subscribe(res => {
         this.filmService.searchFilm(res);
+        this.filmNotFound = !Boolean(res);
       })
 
-    //@ts-ignore
-    this.form.get('toggle').valueChanges.subscribe(res => {
-      console.log(res)
-    })
+  }
+
+  onToggleChange(n: number) {
+    this.selected = n;
   }
 
   onClick(value: boolean):void{
-    console.log(value);
+  //
   }
 
 }

@@ -26,6 +26,12 @@ nav
     @include regular-text
     letter-spacing: -0.336px
 
+    &__active
+      background-color: $c-primary
+      border-radius: 22px
+      color: white
+      padding: 8px 9px
+
     &:not(:last-child)
       margin-right: 42px
 
@@ -48,5 +54,4 @@ nav
   width: 40px
   height: 40px
   margin-left: 27px
-
-
+  cursor: pointer

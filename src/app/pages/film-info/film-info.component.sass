@@ -1,3 +1,5 @@
+@import "../../styles/mixins"
+
 .main-container
     max-width: 450px
     width: 100%
@@ -31,6 +33,7 @@
   line-height: 22px
   color: black
   margin-left: 50px
+  margin-bottom: 16px
 
 label
   font-family: SF Pro Display, sans-serif
@@ -97,7 +100,34 @@ h1
       text-decoration: none
       color: #002DFF
 
+.poster
+  display: flex
+  flex-direction: column
 
+  img
+    width: 120px
+    height: 120px
+    margin-left: 50px
+    margin-top: 20px
+    cursor: pointer
+
+
+//это сделать нормально
+.saveButton
+  border: 2px solid $c-primary
+  box-sizing: border-box
+  border-radius: 21.5px
+  color: $c-primary
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+  text-align: center
+  margin-left: 190px
+  padding: 8px 12px
+  background: white
+  margin-top: 60px
+  margin-bottom: 70px
+  cursor: pointer
 
 
 

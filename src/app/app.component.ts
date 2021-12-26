@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import {FormArray, FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import { FilmService } from './services/film.service';
-import {delay, distinctUntilChanged} from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -19,6 +18,8 @@ export class AppComponent {
       filmSearch: [],
       genre: [[]]
     });
+
+
 
 
     // this.form.get(`filmSearch`).valueChanges
@@ -39,4 +40,5 @@ export class AppComponent {
   //   (this.form.get('form') as FormArray).removeAt(inx);
   // }
 }
+
 

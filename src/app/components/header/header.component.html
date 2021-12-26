@@ -1,13 +1,13 @@
 <header class="header__wrapper">
   <div class="header">
     <nav>
-      <a routerLink="/" class="link">
+      <a routerLink="/collection" class="link">
         <img src="/assets/header-img/collection-circle.svg" alt="circle">
         Коллекция
       </a>
 
-      <a routerLink="/" class="link">
-        <img src="/assets/header-img/plus.svg" alt="plus">
+      <a routerLink="/" class="link__active link">
+        <img src="/assets/header-img/add-plus.svg" alt="plus">
         Добавить
       </a>
 
@@ -18,10 +18,12 @@
     </a>
 
     <div class="actions">
-      <app-button>
-        <img src="/assets/header-img/white-loupe.svg" alt="loupe">
+      <nav>
+      <a routerLink="/" class="link">
+        <img src="/assets/header-img/loupe.svg" alt="loupe">
         Поиск
-      </app-button>
+      </a>
+      </nav>
       <img class="avatar" src="/assets/header-img/avatar.svg" alt="avatar">
     </div>
 

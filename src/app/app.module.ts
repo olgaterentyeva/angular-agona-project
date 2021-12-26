@@ -7,10 +7,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FilmInfoComponent } from './pages/film-info/film-info.component';
 import { CollectionComponent } from './pages/collection/collection.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { ToggleComponent } from './components/toggle/toggle.component';
 import {OverlayModule} from "@angular/cdk/overlay";
-import { ButtonComponent } from './components/button/button.component';
 import { FilmComponent } from './components/film/film.component';
+import {ToggleComponent} from "./components/toggle/toggle.component";
+import { GenresSearchComponent } from './components/genres-search/genres-search.component';
+import { DescriptionFilmComponent } from './pages/description-film/description-film.component';
 
 
 @NgModule({
@@ -19,9 +20,10 @@ import { FilmComponent } from './components/film/film.component';
     HeaderComponent,
     FilmInfoComponent,
     CollectionComponent,
+    FilmComponent,
     ToggleComponent,
-    ButtonComponent,
-    FilmComponent
+    GenresSearchComponent,
+    DescriptionFilmComponent,
   ],
   imports: [
     BrowserModule,

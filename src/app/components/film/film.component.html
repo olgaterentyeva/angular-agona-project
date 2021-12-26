@@ -1,0 +1,10 @@
+<div class="film" *ngFor="let item of films$ | async">
+  <button (click)="seeFilmInfo()"> <img [src]="item.image" class="filmPoster" alt="poster"></button>
+
+  <div class="filmDescription">
+    <h2>{{item.name}}</h2>
+    <span>{{item.year}}</span>
+  </div>
+
+</div>
+
